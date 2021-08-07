@@ -19,48 +19,6 @@ interface prop {
 
 export const Task : React.FC<prop> = ({todos,donetodo,deltodo}) => {
     
-      //document.getElementById('btn')?.style.visibility
-    //sh?.style.visibility = "visible";
-
-
-    //const b = document.getElementById("btn")?.addEventListener("mouseover",mouseOver)
-    // function mouseenter()
-    // {
-    //     let theDiv: HTMLElement = document.getElementById("btn") as HTMLElement;
-    //     theDiv.style.visibility = 'visible'
-    // }
-
-    // function mouseleave()
-    // {
-    //     let theDiv: HTMLElement = document.getElementById("btn") as HTMLElement;
-    //     theDiv.style.visibility = 'hidden';
-    // }
-
-    // function mouseov()
-    // {
-    //     let theDiv: HTMLElement = document.getElementById("btn") as HTMLElement;
-    //     theDiv.style.visibility = 'visible';
-    // }
-
-    // const mouseleave = (e: MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     // Do something
-    //   };
-
-    const MouseEvent = (e: MouseEvent<HTMLDivElement>) => {
-        e.preventDefault();
-        // Do something
-        const theDiv : HTMLElement = document.getElementById("btn") as HTMLElement;
-        theDiv.style.visibility = 'visible';  
-      };
-
-      const handleMouseEvent = (e: MouseEvent<HTMLDivElement>) => {
-        e.preventDefault();
-        // Do something
-        const theDiv : HTMLElement = document.getElementById("btn") as HTMLElement;
-        theDiv.style.visibility = 'hidden';  
-      };
-
     return(
         <div>
             {todos.map(todo => 

@@ -49,7 +49,7 @@ export const Todo: React.FC = () => {
 
     const AddTodo = (text: string) => {
         const newTodo = { text ,done: false,delete: false};
-        Alltodo.unshift(newTodo)
+        todo.unshift(newTodo)
         };
 
 
