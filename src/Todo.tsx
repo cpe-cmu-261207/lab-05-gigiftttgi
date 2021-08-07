@@ -16,14 +16,12 @@ export const Todo: React.FC = () => {
     const [todo,settodo] = useState(Alltodo)
 
     const doneTodo = (selectedTodo: Todo) => {
-        const newdone = { text : selectedTodo.text ,done: true, delete: false};
-        Alltodo.push(newdone)
+        todo.push({text : selectedTodo.text ,done: true, delete: false})
         const newTodo = todo.map(todo => {
           if (todo === selectedTodo) {
             return {
                 ...todo,
-                done : !todo.done,
-                delete : !todo.delete
+                delete : !todo.delete,
             };
           }
           return todo;
@@ -62,7 +60,7 @@ export const Todo: React.FC = () => {
         else
             {
                 //alert(newtodo);
-                console.log(newtodo)
+                //console.log(newtodo)
                 AddTodo(newtodo)
                 setnewtodo('');
             }    
@@ -76,7 +74,7 @@ export const Todo: React.FC = () => {
             else
             {
                 //alert(newtodo);
-                console.log(newtodo)
+                //console.log(newtodo)
                 AddTodo(newtodo)
                 setnewtodo('');
             } 
